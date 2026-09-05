@@ -1,0 +1,23 @@
+{
+  "name": "pulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A market watchlist that behaves like an inbox",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev --workspace server\" \"npm run dev --workspace web\"",
+    "start": "concurrently -n api,web -c blue,magenta \"npm run start --workspace server\" \"npm run preview --workspace web\"",
+    "build": "npm run build -w web",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web",
+    "reset": "node -e \"require('node:fs').rmSync('server/data',{recursive:true,force:true})\" && echo \"database cleared; it rebuilds on next start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}
