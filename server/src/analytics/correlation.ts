@@ -152,8 +152,8 @@ export function diversification(symbols: string[]): Diversification {
     quality >= 70
       ? `Spread out. ${n} names behave like ${effectiveBets.toFixed(1)} independent positions.`
       : quality >= 40
-        ? `Middling. ${n} names, but only ${effectiveBets.toFixed(1)} independent bets — ${top.sector} is ${Math.round(top.weight * 100)}% of the list.`
-        : `Concentrated. These ${n} names move as roughly ${effectiveBets.toFixed(1)} position${effectiveBets < 1.5 ? "" : "s"}; ${top.sector} alone is ${Math.round(top.weight * 100)}% of the list.`;
+        ? `Middling. ${n} names, but only ${effectiveBets.toFixed(1)} independent bets — ${top.sector} Sector is ${Math.round(top.weight * 100)}% of the list.`
+        : `Concentrated. These ${n} names move as roughly ${effectiveBets.toFixed(1)} position${effectiveBets < 1.5 ? "" : "s"}; ${top.sector} Sector alone is ${Math.round(top.weight * 100)}% of the list.`;
 
   return {
     n,

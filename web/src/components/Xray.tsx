@@ -23,14 +23,14 @@ export function Xray({ data, onAdd }: { data: Diversification; onAdd: (symbol: s
 
   return (
     <section>
-      <h3>Diversification</h3>
+      <h3>Effective Diversification</h3>
 
       {data.effectiveBets !== null ? (
         <>
           <div className="bets">
             <b>{data.effectiveBets.toFixed(1)}</b>
             <span>
-              independent bets across {data.n} names
+              Diversification Ratio
             </span>
           </div>
           <p className="verdict">{data.verdict}</p>

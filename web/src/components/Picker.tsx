@@ -19,12 +19,12 @@ export function Picker({ universe, onAdd }: { universe: UniverseEntry[]; onAdd: 
 
   return (
     <section>
-      <h3>Add a name</h3>
+      <h3>Search & Add Stocks</h3>
       <div className="picker">
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Search 43 NSE names by ticker, company or sector"
+          placeholder="Search ticker, company, or sector (e.g., INFY, IT)"
           aria-label="Search the covered universe"
         />
         <ul>
